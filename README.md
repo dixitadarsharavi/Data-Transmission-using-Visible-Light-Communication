@@ -4,10 +4,15 @@ In these systems, light emitting diodes blink when information is transmitted th
 
 ## Components Used
 Transmitter:  Arduino (Uno)
+
 Receiver:  Arduino (Uno)
+
 LEDs
+
 Photovoltaic Cell
+
 2N2222A NPN switching transistor
+
 Resistors (510 ohm, 10 ohm)
 
 ## IJAR Publication Reference
