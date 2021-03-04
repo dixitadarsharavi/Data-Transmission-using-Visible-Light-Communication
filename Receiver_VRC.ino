@@ -1,12 +1,13 @@
-void setup() {
+void setup()
+{
   Serial.begin(9600);
-  // put your setup code here, to run once:
-
 }
 
-void loop() {
+void loop()
+{
   int arr[32];
-  int po[8]={1,2,4,8,16,32,64,128}; //powers of 2
+  // Powers of 2
+  int po[8]={1,2,4,8,16,32,64,128};
   int i,j=0,k=0,flag=0,n=0,x=0, avg=250;
   int sensorValue;
   
@@ -17,14 +18,14 @@ void loop() {
     {
       arr[j++]=1;
       k=k+po[j-1];
-      //Serial.print("1");
+      // Serial.print("1");
       flag++;
       delay(75);
     }
     else if(sensorValue<=avg && flag>0)
     {
       arr[j++]=0;
-      //Serial.print("0");
+      // Serial.print("0");
       delay(75);
     }    
   }
@@ -36,12 +37,12 @@ void loop() {
       if(sensorValue<=avg)
       {
         arr[j++]=0;
-        //Serial.print("0");
+        // Serial.print("0");
       }
       else if(sensorValue>avg)
       {
         arr[j++]=1;
-        //Serial.print("1");
+        // Serial.print("1");
         n=n+po[i];
       }
       delay(75);      
@@ -52,13 +53,13 @@ void loop() {
       if(sensorValue<=avg)
       {
         arr[j++]=0;
-        //Serial.print("0");
+        // Serial.print("0");
       }
       else if(sensorValue>avg)
       {
         x=x+po[z];
         arr[j++]=1;
-        //Serial.print("1");        
+        // Serial.print("1");
       }
       delay(75);      
     }
